@@ -2334,5 +2334,17 @@
         <SourceImage name="technique_id=T1055,technique_name=Process Injection" condition="begin with">\\</SourceImage>
       </CreateRemoteThread>
     </RuleGroup>
+    
+    <!--  Macro Monitoring: Excel loading VBA DLLs  -->
+    <RuleGroup name="Macro Monitoring - Excel" groupRelation="and">
+      <ImageLoad onmatch="include">
+        <Image condition="is">EXCEL.EXE</Image>
+      </ImageLoad>
+      <ImageLoad onmatch="include">
+        <LoadedImage condition="end with">VBE7INTL.DLL</LoadedImage>
+        <LoadedImage condition="end with">VBE7.DLL</LoadedImage>
+        <LoadedImage condition="end with">VBEUI.DLL</LoadedImage>
+      </ImageLoad>
+    </RuleGroup>
   </EventFiltering>
 </Sysmon>
