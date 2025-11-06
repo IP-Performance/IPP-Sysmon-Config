@@ -1,4 +1,4 @@
-﻿<!--                       NOTICE : This is a balanced generated output of Sysmon-modular with medium verbosity                  -->
+<!--                       NOTICE : This is a balanced generated output of Sysmon-modular with medium verbosity                  -->
 <!--                        due to the balanced nature of this configuration there will be potential blind spots                 -->
 <!--                        for more information go to https://github.com/olafhartong/sysmon-modular/wiki                        -->
 <!--                                                                                                                             -->
@@ -2341,9 +2341,9 @@
         <Image condition="is">EXCEL.EXE</Image>
       </ImageLoad>
       <ImageLoad onmatch="include">
-        <LoadedImage condition="end with">VBE7INTL.DLL</LoadedImage>
-        <LoadedImage condition="end with">VBE7.DLL</LoadedImage>
-        <LoadedImage condition="end with">VBEUI.DLL</LoadedImage>
+        <ImageLoaded condition="end with">VBE7INTL.DLL</ImageLoaded>
+        <ImageLoaded condition="end with">VBE7.DLL</ImageLoaded>
+        <ImageLoaded condition="end with">VBEUI.DLL</ImageLoaded>
       </ImageLoad>
     </RuleGroup>
   </EventFiltering>
